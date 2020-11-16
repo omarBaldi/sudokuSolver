@@ -1,0 +1,46 @@
+@import './variables.scss';
+@import './functions.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    @include flexBoxCenter;
+    background-color: $mainColor;
+    #sudokuBoard {
+        .sudokuRow {
+            @include flexBoxCenter;
+            &:not(:last-child) {
+                border-bottom: 1px solid $mainColor;
+            }
+            &:nth-child(3n + 0) {
+                border-bottom: 5px solid $mainColor;
+            }
+            .sudokuColumn {
+                @include flexBoxCenter;
+                height: $sudokuBoxMeasure;
+                width: $sudokuBoxMeasure;
+                background-color: white;
+                font-size: 2.2em;
+                &:not(:last-child) {
+                    border-right: 1px solid $mainColor;
+                }
+                &:nth-child(3n + 0) {
+                    border-right: 5px solid $mainColor;
+                }
+            }
+            .sudokuColumn.boxClicked {
+                background-color: lightblue;
+            }
+        }
+
+    }
+}
