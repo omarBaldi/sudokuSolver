@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './functions.scss';
+@import './buttons.scss';
 
 * {
     box-sizing: border-box;
@@ -14,7 +15,14 @@ body {
 .container {
     min-height: 100vh;
     @include flexBoxCenter;
+    flex-direction: column;
     background-color: $mainColor;
+    .rowbuttons {
+        margin-bottom: 2rem;
+        button {
+            @extend .buttonsSudoku;
+        }
+    }
     #sudokuBoard {
         .sudokuRow {
             @include flexBoxCenter;
@@ -29,7 +37,8 @@ body {
                 height: $sudokuBoxMeasure;
                 width: $sudokuBoxMeasure;
                 background-color: white;
-                font-size: 2.2em;
+                font-size: 2.1em;
+                font-weight: lighter;
                 &:not(:last-child) {
                     border-right: 1px solid $mainColor;
                 }
@@ -38,7 +47,11 @@ body {
                 }
             }
             .sudokuColumn.boxClicked {
-                background-color: lightblue;
+                background-color: lightgrey;
+            }
+            .sudokuColumn.solution {
+                font-weight: 900;
+                font-size: 2.3em;
             }
         }
 

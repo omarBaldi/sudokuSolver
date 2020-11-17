@@ -79,7 +79,13 @@ export default class SudokuBoard {
                 //Set class active to new cell
                 document.querySelectorAll('.sudokuColumn')[this.indexActiveCell].classList.add('boxClicked');
 
-            } else {
+            } 
+            //Delete number
+            else if (Number(e.keyCode) == 8) {
+                const currentActiveCell = this.getActiveCell();
+                currentActiveCell.innerText = null;
+            }
+            else {
                 console.log("Button NOT valid!")
             }
         });
