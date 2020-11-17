@@ -14,4 +14,7 @@ by find the only possible solution using the backtracking alghoritm.
 ![Sudoku Image 1](./images/sudoku_image_1.png)
 
 ## Step 2
-![Sudoku Image 2](./images/sudoku_image_1.png)
+![Sudoku Image 2](./images/sudoku_image_2.png)
+
+## Step 3
+![Sudoku Image 3](./images/sudoku_image_3.png)
