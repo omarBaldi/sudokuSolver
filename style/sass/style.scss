@@ -37,7 +37,8 @@ body {
                 height: $sudokuBoxMeasure;
                 width: $sudokuBoxMeasure;
                 background-color: white;
-                font-size: 2.1em;
+                font-size: 1.9em;
+                color: grey;
                 font-weight: lighter;
                 &:not(:last-child) {
                     border-right: 1px solid $mainColor;
@@ -50,10 +51,13 @@ body {
                 background-color: lightgrey;
             }
             .sudokuColumn.solution {
+                color: black;
                 font-weight: 900;
-                font-size: 2.3em;
+                font-size: 2.5em;
             }
         }
 
     }
 }
+
+@import './responsive.scss';

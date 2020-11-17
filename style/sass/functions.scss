@@ -1,5 +1,29 @@
+@import './variables.scss';
+
+
 @mixin flexBoxCenter() {
     display: flex;
     justify-content: center;
     align-items: center;
 };
+
+@mixin changeCellSize($currentWidth) {
+    .container {
+        #sudokuBoard {
+            .sudokuRow {
+                .sudokuColumn {
+                    @if $currentWidth == $size1 {
+                        height: $sudokuBoxSize1;
+                        width: $sudokuBoxSize1;
+                    } @else if $currentWidth == $size2 {
+                        height: $sudokuBoxSize2;
+                        width: $sudokuBoxSize2;
+                    } @else {
+                        height: $sudokuBoxSize3;
+                        width: $sudokuBoxSize4;
+                    }
+                }
+            }
+        }
+    }
+}

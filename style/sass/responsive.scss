@@ -1,0 +1,13 @@
+@import './functions.scss';
+
+@media screen and (max-width: $size1) {
+    @include changeCellSize($size1);
+}
+
+@media screen and (max-width: 500px) {
+    @include changeCellSize($size1);
+}
+
+@media screen and (max-width: 400px) {
+    @include changeCellSize($size1);
+}
